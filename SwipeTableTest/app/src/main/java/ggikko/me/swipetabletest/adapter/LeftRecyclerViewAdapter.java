@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import ggikko.me.swipetabletest.MainActivity;
@@ -19,9 +22,14 @@ import ggikko.me.swipetabletest.inneradapter.LeftRecyclerViewInnerAdapter;
 public class LeftRecyclerViewAdapter extends RecyclerView.Adapter<LeftRecyclerViewAdapter.LeftSideViewHolder> {
 
     private Context mContext;
+    List<Integer> data = new ArrayList<>();
 
     public LeftRecyclerViewAdapter(Context context) {
         this.mContext = context;
+    }
+
+    public void setData(List<Integer> data) {
+        this.data = data;
     }
 
     @Override
