@@ -5,4 +5,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="shadow_start">#80000000</color>
     <color name="shadow_end">#00000000</color>
+    <color name="silver">#e5e5e5</color>
+    <color name="white">#ffffff</color>
 </resources>

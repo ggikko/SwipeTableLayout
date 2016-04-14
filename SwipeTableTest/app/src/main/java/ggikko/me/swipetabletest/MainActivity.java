@@ -32,18 +32,6 @@ public class MainActivity extends AppCompatActivity implements OnStartDragListen
 
     private ItemTouchHelper mItemTouchHelper;
 
-    private List<Integer> loan_id_list = new ArrayList<>();
-    private List<String> pf_grade_list = new ArrayList<>();
-    private List<String> interest_rate_list = new ArrayList<>();
-    private List<String> loan_application_termlist_list = new ArrayList<>();
-    private List<String> bad_rate_list = new ArrayList<>();
-    private List<String> grade_cb_kcb_list = new ArrayList<>();
-    private List<String> grade_cb_nice_list = new ArrayList<>();
-    private List<String> dti_list = new ArrayList<>();
-    private List<String> loan_application_amount_list = new ArrayList<>();
-    private List<String> remain_loan_application_amount_list = new ArrayList<>();
-    private List<String> fund_start_time_list = new ArrayList<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,21 +75,6 @@ public class MainActivity extends AppCompatActivity implements OnStartDragListen
 
     }
 
-    void getTestData(){
-        for(int i =1200; i<1240; i++){
-            loan_id_list.add(i);
-            pf_grade_list.add("B2");
-            interest_rate_list.add("5.49%");
-            loan_application_termlist_list.add("24개월");
-            bad_rate_list.add("0.77%");
-            grade_cb_kcb_list.add("2등급");
-            grade_cb_nice_list.add("1등급");
-            dti_list.add("11%");
-            loan_application_amount_list.add("200만원");
-            remain_loan_application_amount_list.add("1000만원");
-            fund_start_time_list.add("15시간");
-        }
-    }
 
     @Override
     public void onStartDrag(RecyclerView.ViewHolder viewHolder) {

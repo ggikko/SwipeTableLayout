@@ -1,6 +1,7 @@
 package ggikko.me.swipetabletest.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -16,6 +17,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import ggikko.me.swipetabletest.R;
 import ggikko.me.swipetabletest.helper.ItemTouchHelperAdapter;
+import ggikko.me.swipetabletest.helper.ItemTouchHelperViewHolder;
 import ggikko.me.swipetabletest.inneradapter.LeftRecyclerViewInnerAdapter;
 import ggikko.me.swipetabletest.inneradapter.RightRecyclerViewInnerAdapter;
 
@@ -93,7 +95,7 @@ public class RightRecyclerViewAdapter extends RecyclerView.Adapter<RightRecycler
     }
 
     /** right side viewholder */
-    public class RightSideViewHolder extends RecyclerView.ViewHolder {
+    public class RightSideViewHolder extends RecyclerView.ViewHolder implements ItemTouchHelperViewHolder {
 
         @Bind(R.id.recycler_right_inner) RecyclerView recycler_right_inner;
 
@@ -120,6 +122,16 @@ public class RightRecyclerViewAdapter extends RecyclerView.Adapter<RightRecycler
             recycler_right_inner.setAdapter(mRightRecyclerViewInnerAdapter);
 
 
+        }
+
+        @Override
+        public void onItemSelected() {
+            itemView.setBackgroundColor(Color.LTGRAY);
+        }
+
+        @Override
+        public void onItemClear() {
+            itemView.setBackgroundColor(0);
         }
     }
 }
