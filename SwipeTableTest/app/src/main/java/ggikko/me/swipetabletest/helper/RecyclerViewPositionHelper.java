@@ -5,7 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 /**
- * Created by admin on 16. 4. 13..
+ * Created by ggikko on 16. 4. 13..
  */
 public class RecyclerViewPositionHelper {
 
